@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Feedback Form</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: helvetica;
+		}
+		body{
+			background-color: aliceblue;
+		}
+		.main{
+			width: 70%;
+			margin: 50px auto;
+			border-radius: 10px;
+			border: 5px solid #79a3b1;
+			border-left: 40px solid #79a3b1;
+			box-shadow: 1px 2px 10px #555;
+		}
+
+        .easy{
+           float:left;
+            margin-left:10px;
+        }
+
+        .red{
+            color:red;
+        }
+
+        .blue{
+            color:blue;
+        }
+
+        		.info{
+			width: 100%;
+			background-color: #79a3b1;
+			padding: 7px;
+			text-shadow: 1px 1px 1px #222;
+			color: #fff;
+			font-size: 20px;text-align: center;
+		}
+		.form-box{
+			padding: 20px;
+			background-color: #eee;
+            }
+        
+		label{
+			color: navy;
+			font-size: 18px;
+		}
+		.inp,.msg-box{
+			width: 100%;
+			padding: 10px;
+			margin-top: 4px;
+			margin-bottom: 5px;
+			border-radius: 5px;
+			border: 2px solid #79a3b1;
+			font-weight: normal;
+			color: #79a3b1;
+			border-right: 15px solid #79a3b1;
+			border-left: 15px solid #79a3b1;
+			resize: none;
+		}
+		.msg-box{
+			height: 80px;
+		}
+		.inp:focus,.msg-box:focus{
+			outline: none;
+			border: 2px solid navy;
+			border-right: 15px solid navy;
+			border-left: 15px solid navy;
+		}
+		.sub-btn{
+			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			margin-top: 5px;
+			border: none;
+			background: linear-gradient(#16697a,#59886b);
+			cursor: pointer;
+			color: #fff;
+			font-size: 20px;
+			text-shadow: 1px 1px 1px #444;
+		}
+		.sub-btn:hover{
+			background: linear-gradient(#800000,#dc143c);
+			opacity: 0.8;
+			transition: all ease-out 0.2s;
+		}
+		.sub-btn:focus{
+			outline: none;
+		}
+		@media only screen and (max-width: 1100px) {
+
+        .main{
+        width: 80%;
+            height:100%;
+            border-radius: 10px;
+		  	border: 5px solid #79a3b1;
+		  	border-left: 10px solid #79a3b1;
+		  	box-shadow: 1px 2px 10px #555;
+            margin-top: 70px;
+            font-size:3rem;
+            text-align: center;
+             }
+
+            .red{
+            color:blue;
+        }
+
+            label{
+			color: navy;
+			font-size: 2.5rem;
+            }
+        .blue{
+            color:red;
+            }
+            
+           .info{
+			width: 100%;
+			background-color: #79a3b1;
+			padding: 15px;
+			text-shadow: 1px 1px 1px #222;
+			color: #fff;
+			font-size: 30px;
+		}
+
+
+		.inp {
+			width: 100%;
+			height:150px;
+			padding: 10px;
+			margin-top: 4px;
+			margin-bottom: 5px;
+			border-radius: 5px;
+			border: 2px solid #79a3b1;
+			font-weight: normal;
+			font-size: 2rem;
+			color: #79a3b1;
+			border-right: 15px solid #79a3b1;
+			border-left: 15px solid #79a3b1;
+			resize: vertical;
+		}
+
+		label{
+			width: 100%;
+			padding: 10px;
+			margin-top: 4px;
+			margin-bottom: 5px;
+			font-weight: bold;
+			font-size: 3rem;
+			color: #79a3b1;
+			}
+
+            .sub-btn{
+			width: 50%;
+            height:60px;
+			padding: 10px;
+			border-radius: 5px;
+			margin-top: 5px;
+			border: none;
+			background: linear-gradient(#16697a,#59886b);
+			cursor: pointer;
+			color: #fff;
+			font-size: 40px;
+			text-shadow: 1px 1px 1px #444;
+            }
+
+           
+		.msg-box{
+			width: 100%;
+			height:300px;
+			padding: 10px;
+			margin-top: 4px;
+			margin-bottom: 5px;
+			border-radius: 5px;
+			border: 2px solid #79a3b1;
+			font-weight: normal;
+			font-size: 2rem;
+			color: #79a3b1;
+			border-right: 15px solid #79a3b1;
+			border-left: 15px solid #79a3b1;
+			resize: vertical;
+		}
+        }
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="info"><span class="easy"><span class="red">Easy</span><span class="blue">Code</span></span><span class="request">Please provide the following information!</span></div>
+		<form action="mail_handler.php" method="post" name="form" class="form-box">
+
+			<label for="name">Name</label><br>
+			<input type="text" name="name" class="inp" placeholder="Enter Your Full Name" required><br>
+
+			<label for="email">Email Address</label><br>
+			<input type="email" name="email" class="inp" placeholder="Enter Your Email Address" required><br>
+
+			<label for="phone">Phone No.</label><br>
+			<input type="tel" name="phone" class="inp" placeholder="Enter Your Phone No." required><br>
+
+            <label for="businessName">Business Name</label><br>
+			<input type="text" name="businessName" class="inp" placeholder="Enter Name of Business" required><br>
+            
+            <label for="serName">Service Required</label><br>
+			<input type="text" name="serName" class="inp" placeholder="Enter Type of Service Required" required><br>
+
+			<label for="message">Nature of Business</label><br>
+			<textarea name="msg" class="msg-box" placeholder="What is the nature of your business?..." required></textarea><br>
+
+			<input type="submit" name="submit" value="Submit" class="sub-btn">
+		</form>
+	</div>
+</body>
+</html>
